@@ -1,0 +1,33 @@
+# split input by characters and sort
+# input_user = [char for char in input("Enter a string: ")]
+
+# split input by words and sort
+input_user = [word for word in input("Enter a string: ").split()]
+input_user.sort()
+
+
+def word_freq(text):
+    dict = {}
+    repeat = ""
+    count = 1
+
+    # count repeats and store into dict
+    for item in text:
+        if item == repeat:
+            count += 1
+        else:
+            count = 1
+        repeat = item
+        dict[repeat] = (count)
+
+    return dict
+
+
+def max_word_freq(freqdict):
+    # loop thru the dict for the biggest value, return all match keys
+    return [key for key in freqdict.keys() if freqdict[key] == max(freqdict.values())]
+
+
+my_dict = word_freq(input_user)
+print(my_dict)
+print(*max_word_freq(my_dict))
