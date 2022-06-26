@@ -1,0 +1,19 @@
+# split input by characters and sort
+# input_user = [char for char in input("Enter a string: ")]
+
+
+# asd asd asd ioweyhf fbnweiuogfvsewbno wfhhwe whqe qweh qweh safndk 322 3 3
+
+from collections import defaultdict
+
+input_user = input("Enter a string: ").replace(" ", "")
+
+
+def word_freq(text):
+    dict = defaultdict(int)
+    for item in text:
+        dict[item] += 1
+    return dict
+
+
+print(dict(word_freq(input_user)))
