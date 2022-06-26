@@ -1,3 +1,5 @@
+from collections import defaultdict
+
 # split input by characters and sort
 # input_user = [char for char in input("Enter a string: ")]
 
