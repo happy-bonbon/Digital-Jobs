@@ -1,7 +1,6 @@
 def common_str(alist, blist):
     
     #check for matches by count the new list
-    #set will fix the  duplicate items bug
     common_list = {a for a in alist for b in blist if a == b}
     
     return len(common_list)       

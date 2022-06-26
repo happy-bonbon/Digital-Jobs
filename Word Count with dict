@@ -1,27 +1,38 @@
-from collections import defaultdict
-
 # split input by characters and sort
 # input_user = [char for char in input("Enter a string: ")]
 
+# input_user = [word for word in input("Enter a string: ").split()]
+# input_user.sort()
+
 # split input by words and sort
-input_user = [word for word in input("Enter a string: ").split()]
-input_user.sort()
+
+# def word_freq(text):
+#     dict = {}
+#     repeat = ""
+#     count = 1
+
+#     # count repeats and store into dict
+#     for item in text:
+#         if item == repeat:
+#             count += 1
+#         else:
+#             count = 1
+#         repeat = item
+#         dict[repeat] = (count)
+
+#     return dict
+
+# asd asd asd ioweyhf fbnweiuogfvsewbno wfhhwe whqe qweh qweh safndk 322 3 3
+
+from collections import defaultdict
+
+input_user = input("Enter a string: ").split()
 
 
 def word_freq(text):
-    dict = {}
-    repeat = ""
-    count = 1
-
-    # count repeats and store into dict
+    dict = defaultdict(int)
     for item in text:
-        if item == repeat:
-            count += 1
-        else:
-            count = 1
-        repeat = item
-        dict[repeat] = (count)
-
+        dict[item] += 1
     return dict
 
 
@@ -31,5 +42,5 @@ def max_word_freq(freqdict):
 
 
 my_dict = word_freq(input_user)
-print(my_dict)
-print(*max_word_freq(my_dict))
+print(dict(my_dict))
+print('The most repeat word is "' + str(*max_word_freq(my_dict)) + '" !')
