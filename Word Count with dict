@@ -43,4 +43,4 @@ def max_word_freq(freqdict):
 
 my_dict = word_freq(input_user)
 print(dict(my_dict))
-print('The most repeat word is "' + str(*max_word_freq(my_dict)) + '" !')
+print('The most repeat word is "',*max_word_freq(my_dict),'" !')
