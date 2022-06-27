@@ -11,8 +11,8 @@ def cheat(alist, blist):
     return len(set(alist).intersection(blist))
 
 
-a_list = input("Enter the first list:  ").split()
-b_list = input("Enter the second list:  ").split()
+a_list = input("Enter the first list, separate with space:  ").split()
+b_list = input("Enter the second list, separate with space:  ").split()
 
-# print(common_str(a_list,b_list))
 print(cheat(a_list, b_list))
+# print(common_str(a_list,b_list))
