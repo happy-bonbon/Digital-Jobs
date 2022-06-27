@@ -2,3 +2,4 @@ import math
 import numpy
 print(math.pi)
 print(math.e)
+print("ashduiahduisf".upper())
